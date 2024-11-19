@@ -1,47 +1,182 @@
 'use client';
 
 import Head from 'next/head';
-import { FaShoppingCart } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const products = [
-  { id: 1, name: 'Product 1', price: '2,500 Php ', image: 'https://my-test-11.slatic.net/p/3c44feb26efe8c9e3ea6210bba7b0733.jpg' },
-  { id: 2, name: 'Product 2', price: '1,850 Php ', image: 'https://enfant.com.ph/cdn/shop/files/2270509cbe91fafc3585fb3faa213a52.jpg?v=1724313307&width=1445' },
-  { id: 3, name: 'Product 3', price: '2,300 Php ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1cvj4v7MxTNEXmv5dxuHS46-ZQfwxDSK16g&s' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://static.nike.com/a/images/w_1920,c_limit/5359f1a2-d415-43ac-80d8-0a285023bd17/image.jpg' },
-  { id: 1, name: 'Product 1', price: '2,700 Php ', image: 'https://i.ebayimg.com/images/g/4sIAAOSw1EZexTbk/s-l1200.jpg' },
-  { id: 2, name: 'Product 2', price: '1,920 Php ', image: 'https://i5.walmartimages.com/seo/Women-Shoes-Ladies-Breathable-Sneakers-Non-Slip-Soft-Sole-Mesh-Tennis-Walking-Fashion-Pink-7_66136bd9-432b-435f-aeb7-384ee98e8723.aec7fa8ded5265701ced5a03e440d0d3.jpeg' },
-  { id: 3, name: 'Product 3', price: '2,890 Php ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiowjzZqUNaQwIU8PMa_R3OL6nft8zbCMmyA&s' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://baccabucci.com/cdn/shop/products/MG_5242.jpg?v=1633514122' },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,500 Php ',
+    image:
+      'https://my-test-11.slatic.net/p/3c44feb26efe8c9e3ea6210bba7b0733.jpg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,850 Php ',
+    image:
+      'https://enfant.com.ph/cdn/shop/files/2270509cbe91fafc3585fb3faa213a52.jpg?v=1724313307&width=1445',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,300 Php ',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1cvj4v7MxTNEXmv5dxuHS46-ZQfwxDSK16g&s',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image:
+      'https://static.nike.com/a/images/w_1920,c_limit/5359f1a2-d415-43ac-80d8-0a285023bd17/image.jpg',
+  },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,700 Php ',
+    image: 'https://i.ebayimg.com/images/g/4sIAAOSw1EZexTbk/s-l1200.jpg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,920 Php ',
+    image:
+      'https://i5.walmartimages.com/seo/Women-Shoes-Ladies-Breathable-Sneakers-Non-Slip-Soft-Sole-Mesh-Tennis-Walking-Fashion-Pink-7_66136bd9-432b-435f-aeb7-384ee98e8723.aec7fa8ded5265701ced5a03e440d0d3.jpeg',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,890 Php ',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiowjzZqUNaQwIU8PMa_R3OL6nft8zbCMmyA&s',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image: 'https://baccabucci.com/cdn/shop/products/MG_5242.jpg?v=1633514122',
+  },
   // Repeat products as per your previous example
 ];
 
 const products2 = [
-  { id: 1, name: 'Product 1', price: '2,500 Php ', image: 'https://m.media-amazon.com/images/I/71T8EVp49iL._AC_SL1500_.jpg' },
-  { id: 2, name: 'Product 2', price: '1,850 Php ', image: 'https://thingsremembered.com.ph/cdn/shop/products/BLACK_MED.jpg?v=1715226416' },
-  { id: 3, name: 'Product 3', price: '2,300 Php ', image: 'https://bagsofluxury.com/cdn/shop/files/Collection-1.jpg?v=1710324778&width=3200' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://mygemma.com/cdn/shop/articles/Copy_of_myGemma_Blog_Featured_Image-20_1295d095-b38b-40ad-be9f-7120b1104e42.png?v=1696352823g' },
-  { id: 1, name: 'Product 1', price: '2,700 Php ', image: 'https://res.cloudinary.com/social-upload-prod-media-cld/image/upload/shopify/1/0207/8508/files/ETT9084.jpg?v=1692892836' },
-  { id: 2, name: 'Product 2', price: '1,920 Php ', image: 'https://www.kalkstore.com/cdn/shop/articles/KL_WEB_BLOG_PORTADA_4420x2400_df689793-0c08-4d64-8872-7b415597a5ac.jpg?v=1654701916&width=1500' },
-  { id: 3, name: 'Product 3', price: '2,890 Php ', image: 'https://m.media-amazon.com/images/I/51t3jnd1lUL._AC_SL1001_.jpg' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFZCOH1MrIMTdtuUxMaWkxhaggpLJY90pyug&s' },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,500 Php ',
+    image: 'https://m.media-amazon.com/images/I/71T8EVp49iL._AC_SL1500_.jpg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,850 Php ',
+    image:
+      'https://thingsremembered.com.ph/cdn/shop/products/BLACK_MED.jpg?v=1715226416',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,300 Php ',
+    image:
+      'https://bagsofluxury.com/cdn/shop/files/Collection-1.jpg?v=1710324778&width=3200',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image:
+      'https://mygemma.com/cdn/shop/articles/Copy_of_myGemma_Blog_Featured_Image-20_1295d095-b38b-40ad-be9f-7120b1104e42.png?v=1696352823g',
+  },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,700 Php ',
+    image:
+      'https://res.cloudinary.com/social-upload-prod-media-cld/image/upload/shopify/1/0207/8508/files/ETT9084.jpg?v=1692892836',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,920 Php ',
+    image:
+      'https://www.kalkstore.com/cdn/shop/articles/KL_WEB_BLOG_PORTADA_4420x2400_df689793-0c08-4d64-8872-7b415597a5ac.jpg?v=1654701916&width=1500',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,890 Php ',
+    image: 'https://m.media-amazon.com/images/I/51t3jnd1lUL._AC_SL1001_.jpg',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFZCOH1MrIMTdtuUxMaWkxhaggpLJY90pyug&s',
+  },
   // Repeat products as per your previous example
 ];
 
 const products3 = [
-  { id: 1, name: 'Product 1', price: '2,500 Php ', image: 'https://3.imimg.com/data3/AS/LU/MY-1357390/jewelries-500x500.jpg' },
-  { id: 2, name: 'Product 2', price: '1,850 Php ', image: 'https://image.made-in-china.com/202f0j00deJWiaqBMYbj/OEM-ODM-All-Types-of-Jewelries-Alloly-Brass-925-Sterling-Silver-Stainless-Steel-Jewelry-Necklaces-Bracelets-Earrings-Jewelry.webp' },
-  { id: 3, name: 'Product 3', price: '2,300 Php ', image: 'https://i0.wp.com/waziri.ng/wp-content/uploads/2023/12/Gold-Replica-Bangle-and-Ring-Set-Jewelries.png?fit=500%2C500&ssl=1' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://guesswatches.com/cdn/shop/files/Nav_Collections_656x410_Mobile_F24_Sig_c52b35e4-1d84-4639-8e01-22a339d93a30.png?v=1725468376&width=720' },
-  { id: 1, name: 'Product 1', price: '2,700 Php ', image: 'https://i5.walmartimages.com/seo/OLEVS-Mens-Gold-Watches-Luxury-Stainless-Steel-Band-Watch-For-Men-Big-Face-With-Calendar-Roman-Numerals-Quartz-Wrist-Classic-Waterproof_60e88262-52a8-4d20-a4ac-dcb8ba7ea823.d7784720ad0b1983058d8eb4bd142cd7.jpeg' },
-  { id: 2, name: 'Product 2', price: '1,920 Php ', image: 'https://www.watchgecko.com/cdn/shop/articles/Banner_2_1_1100x.jpg?v=1700729062' },
-  { id: 3, name: 'Product 3', price: '2,890 Php ', image: 'https://media.beaverbrooks.co.uk/i/beaverbrooks/og-watches' },
-  { id: 4, name: 'Product 4', price: '1,900 Php ', image: 'https://globalboutique.com/wp-content/uploads/2023/05/inline-gold-watches-1.jpg' },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,500 Php ',
+    image: 'https://3.imimg.com/data3/AS/LU/MY-1357390/jewelries-500x500.jpg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,850 Php ',
+    image:
+      'https://image.made-in-china.com/202f0j00deJWiaqBMYbj/OEM-ODM-All-Types-of-Jewelries-Alloly-Brass-925-Sterling-Silver-Stainless-Steel-Jewelry-Necklaces-Bracelets-Earrings-Jewelry.webp',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,300 Php ',
+    image:
+      'https://i0.wp.com/waziri.ng/wp-content/uploads/2023/12/Gold-Replica-Bangle-and-Ring-Set-Jewelries.png?fit=500%2C500&ssl=1',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image:
+      'https://guesswatches.com/cdn/shop/files/Nav_Collections_656x410_Mobile_F24_Sig_c52b35e4-1d84-4639-8e01-22a339d93a30.png?v=1725468376&width=720',
+  },
+  {
+    id: 1,
+    name: 'Product 1',
+    price: '2,700 Php ',
+    image:
+      'https://i5.walmartimages.com/seo/OLEVS-Mens-Gold-Watches-Luxury-Stainless-Steel-Band-Watch-For-Men-Big-Face-With-Calendar-Roman-Numerals-Quartz-Wrist-Classic-Waterproof_60e88262-52a8-4d20-a4ac-dcb8ba7ea823.d7784720ad0b1983058d8eb4bd142cd7.jpeg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '1,920 Php ',
+    image:
+      'https://www.watchgecko.com/cdn/shop/articles/Banner_2_1_1100x.jpg?v=1700729062',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '2,890 Php ',
+    image: 'https://media.beaverbrooks.co.uk/i/beaverbrooks/og-watches',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '1,900 Php ',
+    image:
+      'https://globalboutique.com/wp-content/uploads/2023/05/inline-gold-watches-1.jpg',
+  },
   // Repeat products as per your previous example
 ];
-
-
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -148,10 +283,10 @@ const Home = () => {
         <div className="overflow-x-auto pb-6">
           <div className="flex space-x-6">
             {products.map((product, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
-                >
+              <div
+                key={index}
+                className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -177,10 +312,10 @@ const Home = () => {
         <div className="overflow-x-auto pb-6">
           <div className="flex space-x-6">
             {products2.map((product, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
-                >
+              <div
+                key={index}
+                className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -206,10 +341,10 @@ const Home = () => {
         <div className="overflow-x-auto pb-6">
           <div className="flex space-x-6">
             {products3.map((product, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
-                >
+              <div
+                key={index}
+                className="flex-shrink-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 w-64 border-2 border-indigo-500"
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -227,8 +362,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      
 
       {/* Footer */}
       <footer className="bg-pink-600 text-white text-center py-6 mt-16">
