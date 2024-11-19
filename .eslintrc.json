@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser", // Use the TypeScript parser for ESLint setting tells ESLint which parser to use to interpret your source code. ESLint comes with a default parser, but sometimes you may need a different parser for specific language features or syntax (such as TypeScript or JSX).
+  "parserOptions": {
+    "ecmaVersion": 2020, // Use ECMAScript 2020 features
+    "sourceType": "module", // Allow the use of imports
+    "project": "./tsconfig.json" // Specify your tsconfig for TypeScript projects
+  },
+  "extends": [
+    "eslint:recommended", // ESLint's recommended rules
+    "plugin:react/recommended", // React-specific linting rules
+    "plugin:react-hooks/recommended", // React Hooks linting rules
+    "plugin:@typescript-eslint/recommended", // TypeScript linting rules
+    "next", // Next.js-specific linting rules
+    "next/core-web-vitals", // Next.js Core Web Vitals (for performance)
+    "plugin:prettier/recommended", // Integrates Prettier with ESLint
+    "eslint-config-prettier", // Disables ESLint rules that conflict with Prettier
+    "next/typescript"
+  ],
+  "plugins": [
+    "react", // React plugin
+    "react-hooks", // React Hooks plugin
+    "@typescript-eslint", // TypeScript plugin
+    "prettier" // Prettier plugin
+  ],
+  "rules": {
+    "prettier/prettier": "error", // Show Prettier formatting issues as errors
+    "react/react-in-jsx-scope": "off", // Next.js handles React automatically
+    "react/jsx-uses-react": "off", // Next.js handles React automatically
+    "no-console": "warn", // Warn on console logs (useful in production)
+    "react/jsx-uses-vars": "error", // Ensure JSX elements are used correctly
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Optional: Avoid explicit return types
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ] // Optional: Allow unused function args prefixed with "_"
+  }
+}
+
+// {
+//   "extends": ["next/core-web-vitals", "next/typescript"]
+// }
