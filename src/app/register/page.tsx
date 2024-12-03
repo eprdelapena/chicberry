@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-pink-100 via-pink-500 to-indigo-600 py-10">
-        <div className="w-full max-w-lg p-8 space-y-6 bg-gradient-to-t from-pink-100 via-pink-200 to-indigo-200 rounded-lg shadow-lg">
+        <div className="w-full relative top-[-3em] md:top-[0em]  max-w-lg p-8 space-y-6 bg-gradient-to-t from-pink-100 via-pink-200 to-indigo-200 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold text-center text-gray-800 ">
             <Image
               src={chicberrylogo}

@@ -2,6 +2,7 @@ import React from 'react';
 import CHeaderPc from './subcomponents/c_header_pc';
 import { SmainLayoutMargin } from '@/styles/tailwind';
 import CHeaderMobile from './subcomponents/c_header_mobile';
+import Link from 'next/link';
 
 const CClientHeader = () => {
   return (
@@ -19,11 +20,29 @@ const CClientHeader = () => {
         <div
           className={`py-3 flex flex-row gap-x-5 w-full items-center justify-center md:justify-start ${SmainLayoutMargin} `}
         >
-          <p className="text-stone-500 cursor-pointer"> Bags </p>
-          <p className="text-stone-500 cursor-pointer"> Jewelries </p>
-          <p className="text-stone-500 cursor-pointer"> Watch </p>
-          <p className="text-stone-500 cursor-pointer"> Shoes </p>
-          <p className="text-stone-500 cursor-pointer"> Clothes </p>
+          <Link href="/" className="text-stone-500 cursor-pointer">
+            Home
+          </Link>
+          <a href="/products/bags" className="text-stone-500 cursor-pointer">
+            {' '}
+            Bags
+          </a>
+          <a href="/products/clothes" className="text-stone-500 cursor-pointer">
+            {' '}
+            Clothes{' '}
+          </a>
+          <a href="/products/jewelry" className="text-stone-500 cursor-pointer">
+            {' '}
+            Watch{' '}
+          </a>
+          <a href="/products/watch" className="text-stone-500 cursor-pointer">
+            {' '}
+            Shoes{' '}
+          </a>
+          <a href="/products/shoes" className="text-stone-500 cursor-pointer">
+            {' '}
+            Clothes{' '}
+          </a>
         </div>
       </header>
     </>

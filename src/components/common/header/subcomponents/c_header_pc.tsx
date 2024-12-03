@@ -59,25 +59,29 @@ const CHeaderPc = () => {
 
                 {/* if logout */}
                 <ul className="text-stone-500 text-sm">
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
-                    Sign-in
+                  <li className="p-2 hover:bg-gray-300 transition w-full font-light">
+                    <a href="/login" className="cursor-pointer">
+                      Sign-in
+                    </a>
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
-                    Register
+                  <li className="p-2 hover:bg-gray-300 transition w-full font-light">
+                    <a href="/register" className="cursor-pointer">
+                      Register
+                    </a>
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
+                  <li className="p-2 hover:bg-gray-300 transition cursor-pointer font-light">
                     My orders
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
+                  <li className="p-2 hover:bg-gray-300 transition cursor-pointer font-light">
                     My messages
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
+                  <li className="p-2 hover:bg-gray-300 transition cursor-pointer font-light">
                     My coupons
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
+                  <li className="p-2 hover:bg-gray-300 transition cursor-pointer font-light">
                     My points
                   </li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
+                  <li className="p-2 hover:bg-gray-300 transition cursor-pointer font-light">
                     Recently viewed
                   </li>
                   <li className="p-2 hover:bg-gray-100 cursor-pointer font-light">
