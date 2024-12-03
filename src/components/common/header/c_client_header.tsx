@@ -31,15 +31,15 @@ const CClientHeader = () => {
             {' '}
             Clothes{' '}
           </a>
-          <a href="/products/jewelry" className="text-stone-500 cursor-pointer">
+          <a href="/products/watch" className="text-stone-500 cursor-pointer">
             {' '}
             Watch{' '}
           </a>
-          <a href="/products/watch" className="text-stone-500 cursor-pointer">
+          <a href="/products/shoes" className="text-stone-500 cursor-pointer">
             {' '}
             Shoes{' '}
           </a>
-          <a href="/products/shoes" className="text-stone-500 cursor-pointer">
+          <a href="/products/clothes" className="text-stone-500 cursor-pointer">
             {' '}
             Clothes{' '}
           </a>

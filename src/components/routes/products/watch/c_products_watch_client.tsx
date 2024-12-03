@@ -3,7 +3,7 @@ import React from 'react';
 import CClientCardContainer from '@/components/common/cardcontainer/c_client_cardcontainer';
 import { SmainLayoutMargin } from '@/styles/tailwind';
 
-const stringData = 'Shoe Products';
+const stringData = 'Watch Products';
 
 const combinedProductItems = [
   // Bags

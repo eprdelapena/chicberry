@@ -169,7 +169,7 @@ const CCardContainerIndex = () => {
         return (
           <>
             <section className={`${SmainLayoutMargin} mt-5 md:mt-10`}>
-              <h2 className="text-3xl font-semibold text-center mb-8">
+              <h2 className="text-3xl text-black font-semibold text-center mb-8">
                 {x.label}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

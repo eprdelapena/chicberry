@@ -11,10 +11,12 @@ const CClientCardContainer = (props: { data: IProductCard[] }) => {
               <img
                 src={x.image}
                 alt={x.title}
-                className="w-full h-[20em] md:h-[20em] object-cover mb-4 rounded-md bg-red-500" // Increased height (h-80)
+                className="w-full h-[20em] md:h-[20em] object-cover mb-4 rounded-md bg-white" // Increased height (h-80)
               />
               <div className="flex items-center flex-col justify-center gap-y-1">
-                <h3 className="text-xl font-medium text-center">{x.title}</h3>
+                <h3 className="text-xl font-medium text-center text-black">
+                  {x.title}
+                </h3>
                 <p className="text-lg font-semibold text-yellow-700 text-center">
                   {x.price}
                 </p>

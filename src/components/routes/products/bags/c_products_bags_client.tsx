@@ -11,142 +11,125 @@ const combinedProductItems = [
     id: 1,
     title: 'CK Black',
     price: '₱2,499.45',
-    image:
-      'https://media.karousell.com/media/photos/products/2024/5/9/preloved_charles__keith_black__1715250473_ce6db621_progressive.jpg',
+    image: 'https://cdn-images.farfetch-contents.com/13/20/16/04/13201604_54422838_1000.jpg',
   },
   {
     id: 2,
     title: 'Louise Vitton Bag',
     price: '₱5,999.45',
-    image: 'https://m.media-amazon.com/images/I/714AoWuTAXL._AC_UL1500_.jpg',
+    image: 'https://is4.revolveassets.com/images/p4/n/uv/MARJ-WY505_V1.jpg',
   },
   {
     id: 3,
     title: 'Prada Luxury Bag',
     price: '₱65,000.00',
-    image:
-      'https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA426/2C7BF0151/1BA426_2C7B_F0151_V_MOO_MDL.jpg',
+    image: 'https://grandeurstore.ph/cdn/shop/files/A1_c9b3bdcb-2bb0-4e11-a552-88248c81d2d4.png?v=1718265779&width=713',
   },
   {
     id: 4,
     title: 'Chanel Classic',
     price: '₱150,000.00',
-    image: 'https://www.chanel.com/images///f_auto//-9543169343518.jpg',
+    image: 'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
   },
   // Shoes
   {
     id: 5,
     title: 'Nike KD',
     price: '₱1,099.45',
-    image:
-      'https://i.pinimg.com/originals/20/0d/18/200d1824d16179e101b8cc05fa17e53f.jpg',
+    image: 'https://m.media-amazon.com/images/I/71vz71m5usL._AC_SL1500_.jpg',
   },
   {
     id: 6,
     title: 'Kobe 6',
     price: '₱1,649.45',
-    image:
-      'https://down-ph.img.susercontent.com/file/ph-11134207-7r990-lyrtvpu7pe2i28',
+    image: 'https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dwf321765f/images/DIS/L1515HSR892_0.png?sw=500&sh=500&sm=fit',
   },
   {
     id: 7,
     title: 'Zoom Kyrie',
     price: '₱2,199.45',
-    image:
-      'https://s1.dswcdn.com/uploads/Nike_Zoom_Kyrie_Shoes/Nike_Kyrie_3/Nike_Zoom_Kyrie_III_3_Flyknit_black_red_Men_Basketball_Shoes.jpg',
+    image: 'https://5.imimg.com/data5/FV/GM/MY-2/stylish-ladies-bag-1000x1000.jpg',
   },
   {
     id: 8,
     title: 'Jordan 10',
     price: '₱2,749.45',
-    image: 'https://i.ebayimg.com/images/g/jaIAAOSwqHJjuLFf/s-l1200.jpg',
+    image: 'https://m.media-amazon.com/images/I/71aJR2pwB+L._AC_SL1500_.jpg',
   },
   // Watches
   {
     id: 9,
     title: 'Lacoste White Dial',
     price: '₱1,099.45',
-    image:
-      'https://catchywatches.com/wp-content/uploads/2024/08/2011069-original-lacoste-men-women-watch-white-dial-rubber-strap-egypt-13.jpg',
+    image: 'https://rustans.com/cdn/shop/files/3329697_3.jpg?v=1732849397&width=1000',
   },
   {
     id: 10,
     title: 'Rolex Luxury Watch',
     price: '₱1,649.45',
-    image:
-      'https://watchexchange.sg/wp-content/uploads/2023/11/most-expensive-rolex-.jpg',
+    image: 'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
   },
   {
     id: 11,
     title: 'Swatch PON-Wave',
     price: '₱2,199.45',
-    image:
-      'https://www.swatch.com/dw/image/v2/BDNV_PRD/on/demandware.static/-/Library-Sites-swarp-global/default/dw225eb4f7/images/Swatch/collections/2024/PON-Wave-2/d_960x960_good_to_gorp.jpg',
+    image: 'https://is4.revolveassets.com/images/p4/n/uv/FNEF-WY3305_V1.jpg',
   },
   {
     id: 12,
     title: 'Technomarine',
     price: '₱2,749.45',
-    image:
-      'https://mydiamond.com.ph/cdn/shop/products/221931267_4486253581407998_431660367613189167_n_1024x1024@2x.jpg?v=1634524783',
+    image: 'https://m.media-amazon.com/images/I/911vQnvBlUL._AC_SY500_.jpg',
   },
   // Clothes
   {
     id: 13,
     title: 'Uniqlo Performance',
     price: '₱1,099.00',
-    image:
-      'https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common/img/product/item_03_kv.jpg?240829',
+    image: 'https://m.media-amazon.com/images/I/911vQnvBlUL._AC_SY500_.jpg',
   },
   {
     id: 14,
     title: 'Modern Fit',
     price: '₱1,649.00',
-    image:
-      'https://image.uniqlo.com/UQ/ST3/ph/imagesgoods/465185/item/phgoods_15_465185_3x4.jpg?width=494',
+    image: 'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
   },
   {
     id: 15,
     title: 'Sports Edition',
     price: '₱2,199.00',
-    image:
-      'https://image.uniqlo.com/UQ/ST3/my/imagesgoods/470193/sub/mygoods_470193_sub3_3x4.jpg?width=494',
+    image: 'https://m.media-amazon.com/images/I/61iRKAyoeQL._AC_SY625_.jpg',
   },
   {
     id: 16,
     title: 'Utility',
     price: '₱2,749.00',
-    image:
-      'https://im.uniqlo.com/global-cms/spa/res3ca638bb58cd1ba0a0fa3b9612f836defr.jpg',
+    image: 'https://i.ebayimg.com/images/g/9OIAAOSwAXxkOz7l/s-l960.webp',
   },
   // Jewelry
   {
     id: 17,
     title: '18k Saudi Gold Necklace',
     price: '₱1,099.45',
-    image:
-      'https://media.karousell.com/media/photos/products/2022/2/24/18k_saudi_gold_necklace_18_1645712476_bc4b15ef_progressive.jpg',
+    image: 'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
   },
   {
     id: 18,
     title: 'Sparkles Pendant',
     price: '₱1,649.45',
-    image:
-      'https://www.sparkles.ph/cdn/shop/files/9F9F9EDB-B11F-41B6-933A-3F96AEF2631E.png?v=1707430051',
+    image: 'https://img.mytheresa.com/1094/1238/100/jpeg/catalog/product/89/P00488011.jpg',
   },
   {
     id: 19,
     title: 'Zoom Kyrie Jewelry',
     price: '₱2,199.45',
-    image:
-      'https://down-ph.img.susercontent.com/file/ph-11134207-23020-it0effcualnv2f',
+    image: 'https://is4.revolveassets.com/images/p4/n/uv/FNEF-WY2446_V1.jpg',
   },
   {
     id: 20,
     title: 'Jordan 10 Necklace',
     price: '₱2,749.45',
-    image:
-      'https://down-ph.img.susercontent.com/file/3194d0a4f962d013067c17e313b25910',
+    image: 'https://rustans.com/cdn/shop/files/3281638_01.jpg?v=1725195142&width=1000',
   },
 ];
 
