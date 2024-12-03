@@ -11,7 +11,8 @@ const combinedProductItems = [
     id: 1,
     title: 'CK Black',
     price: '₱2,499.45',
-    image: 'https://cdn-images.farfetch-contents.com/13/20/16/04/13201604_54422838_1000.jpg',
+    image:
+      'https://cdn-images.farfetch-contents.com/13/20/16/04/13201604_54422838_1000.jpg',
   },
   {
     id: 2,
@@ -23,13 +24,15 @@ const combinedProductItems = [
     id: 3,
     title: 'Prada Luxury Bag',
     price: '₱65,000.00',
-    image: 'https://grandeurstore.ph/cdn/shop/files/A1_c9b3bdcb-2bb0-4e11-a552-88248c81d2d4.png?v=1718265779&width=713',
+    image:
+      'https://grandeurstore.ph/cdn/shop/files/A1_c9b3bdcb-2bb0-4e11-a552-88248c81d2d4.png?v=1718265779&width=713',
   },
   {
     id: 4,
     title: 'Chanel Classic',
     price: '₱150,000.00',
-    image: 'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
+    image:
+      'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
   },
   // Shoes
   {
@@ -42,13 +45,15 @@ const combinedProductItems = [
     id: 6,
     title: 'Kobe 6',
     price: '₱1,649.45',
-    image: 'https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dwf321765f/images/DIS/L1515HSR892_0.png?sw=500&sh=500&sm=fit',
+    image:
+      'https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dwf321765f/images/DIS/L1515HSR892_0.png?sw=500&sh=500&sm=fit',
   },
   {
     id: 7,
     title: 'Zoom Kyrie',
     price: '₱2,199.45',
-    image: 'https://5.imimg.com/data5/FV/GM/MY-2/stylish-ladies-bag-1000x1000.jpg',
+    image:
+      'https://5.imimg.com/data5/FV/GM/MY-2/stylish-ladies-bag-1000x1000.jpg',
   },
   {
     id: 8,
@@ -61,13 +66,15 @@ const combinedProductItems = [
     id: 9,
     title: 'Lacoste White Dial',
     price: '₱1,099.45',
-    image: 'https://rustans.com/cdn/shop/files/3329697_3.jpg?v=1732849397&width=1000',
+    image:
+      'https://rustans.com/cdn/shop/files/3329697_3.jpg?v=1732849397&width=1000',
   },
   {
     id: 10,
     title: 'Rolex Luxury Watch',
     price: '₱1,649.45',
-    image: 'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
+    image:
+      'https://baginning.com/media/catalog/product/cache/79b7de24d0c40c829bb951f51913e3c1/w/h/white_leather_top_handle_bag_3_.jpg',
   },
   {
     id: 11,
@@ -92,7 +99,8 @@ const combinedProductItems = [
     id: 14,
     title: 'Modern Fit',
     price: '₱1,649.00',
-    image: 'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
+    image:
+      'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
   },
   {
     id: 15,
@@ -111,13 +119,15 @@ const combinedProductItems = [
     id: 17,
     title: '18k Saudi Gold Necklace',
     price: '₱1,099.45',
-    image: 'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
+    image:
+      'https://image.made-in-china.com/155f0j00PbUkJWirbQcs/Nine-West-Calandra-Mini-Flap-Crossbody-Woman-Tote-Bag-Fashion-Lady-Handbags.webp',
   },
   {
     id: 18,
     title: 'Sparkles Pendant',
     price: '₱1,649.45',
-    image: 'https://img.mytheresa.com/1094/1238/100/jpeg/catalog/product/89/P00488011.jpg',
+    image:
+      'https://img.mytheresa.com/1094/1238/100/jpeg/catalog/product/89/P00488011.jpg',
   },
   {
     id: 19,
@@ -129,7 +139,8 @@ const combinedProductItems = [
     id: 20,
     title: 'Jordan 10 Necklace',
     price: '₱2,749.45',
-    image: 'https://rustans.com/cdn/shop/files/3281638_01.jpg?v=1725195142&width=1000',
+    image:
+      'https://rustans.com/cdn/shop/files/3281638_01.jpg?v=1725195142&width=1000',
   },
 ];
 
@@ -137,6 +148,7 @@ const CProductsBagsClient = () => {
   return (
     <>
       <CInstructionContainer />
+
       <div
         className={`${SmainLayoutMargin} flex w-full items-center flex-col gap-y-5 justify-center`}
       >
