@@ -2,8 +2,16 @@ import React from 'react';
 import CHeaderPc from './subcomponents/c_header_pc';
 import { SmainLayoutMargin } from '@/styles/tailwind';
 import CHeaderMobile from './subcomponents/c_header_mobile';
+import { ERoutes } from '@/enums/enums_main';
 import Link from 'next/link';
 
+const menuLinks: { label: string; urlLink: ERoutes }[] = [
+  { label: 'shoes', urlLink: ERoutes.ProductShoes },
+  { label: 'bags', urlLink: ERoutes.ProductBags },
+  { label: 'watch', urlLink: ERoutes.ProductWatch },
+  { label: 'clothes', urlLink: ERoutes.ProductClothes },
+  { label: 'jewelry', urlLink: ERoutes.ProductJewelry },
+];
 const CClientHeader = () => {
   return (
     <>
@@ -20,29 +28,23 @@ const CClientHeader = () => {
         <div
           className={`py-3 flex flex-row gap-x-5 w-full items-center justify-center md:justify-start ${SmainLayoutMargin} `}
         >
-          <Link href="/" className="text-stone-500 cursor-pointer">
+          <Link href={ERoutes.home} className="text-stone-500 cursor-pointer">
             Home
           </Link>
-          <a href="/products/bags" className="text-stone-500 cursor-pointer">
-            {' '}
-            Bags
-          </a>
-          <a href="/products/clothes" className="text-stone-500 cursor-pointer">
-            {' '}
-            Clothes{' '}
-          </a>
-          <a href="/products/watch" className="text-stone-500 cursor-pointer">
-            {' '}
-            Watch{' '}
-          </a>
-          <a href="/products/shoes" className="text-stone-500 cursor-pointer">
-            {' '}
-            Shoes{' '}
-          </a>
-          <a href="/products/clothes" className="text-stone-500 cursor-pointer">
-            {' '}
-            Clothes{' '}
-          </a>
+          {menuLinks.map((x: { label: string; urlLink: ERoutes }) => {
+            return (
+              <>
+                <a
+                  href={x.urlLink}
+                  className="text-stone-500 cursor-pointer"
+                  key={x.label}
+                >
+                  {' '}
+                  {x.label}
+                </a>
+              </>
+            );
+          })}
         </div>
       </header>
     </>

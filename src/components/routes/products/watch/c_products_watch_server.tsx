@@ -1,10 +1,12 @@
 import React from 'react';
-import CProductsWatchClient from './c_products_watch_client';
+import CProductClient from '@/components/common/productcontainer/c_product_client';
+import { ELabels } from '@/enums/enums_main';
+import { SampleBagData } from '@/utils/sampledata';
 
 const CProductsWatchServer = () => {
   return (
     <>
-      <CProductsWatchClient />
+      <CProductClient label={ELabels.watch} productArray={SampleBagData} />
     </>
   );
 };

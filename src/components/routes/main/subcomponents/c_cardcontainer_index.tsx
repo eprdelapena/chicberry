@@ -1,7 +1,8 @@
 import React from 'react';
 import CClientCardContainer from '@/components/common/cardcontainer/c_client_cardcontainer';
 import { SmainLayoutMargin } from '@/styles/tailwind';
-import { IProductCard } from '@/components/schema/schema_main';
+import { IProductCard } from '@/schema/schema_main';
+import { SampleBagData } from '@/utils/sampledata';
 
 const bagsProductItems2 = [
   {
@@ -156,11 +157,11 @@ const JewelryItems5 = [
 ];
 
 const dataArray: { label: string; data: IProductCard[] }[] = [
-  { label: 'Featured Bag Products', data: bagsProductItems2 },
-  { label: 'Features Shoe Products', data: productItems },
-  { label: 'Featured Watch Products', data: WatchproductItems3 },
-  { label: 'Featured Clothes Products', data: ClothesproductItems4 },
-  { label: 'Featured Jewelry Items', data: JewelryItems5 },
+  { label: 'Featured Bag Products', data: SampleBagData.slice(0,4) },
+  { label: 'Features Shoe Products', data: SampleBagData.slice(0,4) },
+  { label: 'Featured Watch Products', data: SampleBagData.slice(0,4) },
+  { label: 'Featured Clothes Products', data: SampleBagData.slice(0,4) },
+  { label: 'Featured Jewelry Items', data: SampleBagData.slice(0,4) },
 ];
 const CCardContainerIndex = () => {
   return (

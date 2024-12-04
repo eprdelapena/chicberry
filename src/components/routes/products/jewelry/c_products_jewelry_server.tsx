@@ -1,10 +1,12 @@
 import React from 'react';
-import CProductsJewelryClient from './c_products_jewelry_client';
+import CProductClient from '@/components/common/productcontainer/c_product_client';
+import { ELabels } from '@/enums/enums_main';
+import { SampleBagData } from '@/utils/sampledata';
 
 const CProductsJewelryServer = () => {
   return (
     <>
-      <CProductsJewelryClient />
+      <CProductClient label={ELabels.jewelry} productArray={SampleBagData}/>
     </>
   );
 };
