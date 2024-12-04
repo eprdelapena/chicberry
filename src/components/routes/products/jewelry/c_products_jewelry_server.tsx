@@ -6,7 +6,7 @@ import { SampleBagData } from '@/utils/sampledata';
 const CProductsJewelryServer = () => {
   return (
     <>
-      <CProductClient label={ELabels.jewelry} productArray={SampleBagData}/>
+      <CProductClient label={ELabels.jewelry} productArray={SampleBagData} />
     </>
   );
 };

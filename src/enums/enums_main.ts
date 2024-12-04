@@ -9,8 +9,8 @@ export enum ERoutes {
 
 export enum ELabels {
   bags = 'Bag products',
-  clothes = "Clothe products",
-  jewelry = "Jewelry products",
-  watch = "Watch products",
-  shoes = "Shoe products"
+  clothes = 'Clothe products',
+  jewelry = 'Jewelry products',
+  watch = 'Watch products',
+  shoes = 'Shoe products',
 }
