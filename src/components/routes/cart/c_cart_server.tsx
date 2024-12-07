@@ -1,12 +1,12 @@
-import React from 'react'
-import CCartClient from './c_cart_client'
+import React from 'react';
+import CCartClient from './c_cart_client';
 
 const CCartServer = () => {
   return (
     <>
-        <CCartClient/>
+      <CCartClient />
     </>
-  )
-}
+  );
+};
 
-export default CCartServer
+export default CCartServer;
