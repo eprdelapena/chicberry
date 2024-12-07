@@ -36,7 +36,7 @@ const CClientCardContainer = (props: { data: IProductCard[] }) => {
               <p className="text-lg font-semibold text-yellow-700 text-center">
                 {x.price}
               </p>
-              <div className="w-full flex flex-col md:gap-y-0 gap-y-1 md:flex-row items-center justify-center gap-x-2">
+              <div className="w-full flex md:gap-y-0 gap-y-1 flex-row items-center justify-center gap-x-2">
                 <button className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600">
                   Add to Cart
                 </button>
