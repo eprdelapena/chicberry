@@ -134,10 +134,3 @@ const CClientCardContainer = (props: { data: IProductCard[] }) => {
 };
 
 export default CClientCardContainer;
-
-
-
-
-
-
-
