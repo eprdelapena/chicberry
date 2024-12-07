@@ -76,7 +76,7 @@ const OrderSummary = () => {
                     </p>
                   </div>
 
-                  <div className="flex justify-between gap-x-5 items-center w-full sm:w-auto md:w-auto">
+                  <div className="flex md:flex-row flex-col justify-between gap-x-5 md:items-center w-full sm:w-auto md:w-auto">
                     <p className="font-medium text-gray-900 text-right md:text-left">
                       ₱ {(item.product.price * item.quantity).toLocaleString()}
                     </p>
